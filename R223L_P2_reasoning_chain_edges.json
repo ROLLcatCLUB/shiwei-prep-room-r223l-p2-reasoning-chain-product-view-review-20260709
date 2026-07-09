@@ -1,0 +1,105 @@
+{
+  "stage_id": "1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW",
+  "sample": "我为文具代言",
+  "status": "reasoning_chain_product_view_only",
+  "raw_sample_files_available_in_repo": false,
+  "formal_ui": false,
+  "edges": [
+    {
+      "edge_id": "p2_edge_001",
+      "from": "source.evidence",
+      "to": "unit.dna",
+      "relationship": "classifies",
+      "evidence": "一学段一年级美术、学习小帮手、文具与学习生活对象共同指向设计应用和生活问题解决。",
+      "source_status": "reconstructed_from_R221A_R221C"
+    },
+    {
+      "edge_id": "p2_edge_002",
+      "from": "unit.big_idea",
+      "to": "unit.essential_question",
+      "relationship": "translates_value_to_inquiry",
+      "evidence": "大观念中的好奇心、想象力、设计改进和改善学习生活，转化为学生如何全面了解文具并感受其重要性。",
+      "source_status": "confirmed_from_R221A"
+    },
+    {
+      "edge_id": "p2_edge_003",
+      "from": "unit.essential_question",
+      "to": "unit.performance_task",
+      "relationship": "requires_public_evidence",
+      "evidence": "学生要证明自己理解文具的重要性，需要形成购买建议书和课堂使用指南。",
+      "source_status": "confirmed_reference_sample"
+    },
+    {
+      "edge_id": "p2_edge_004",
+      "from": "learner.problem.observation_weak",
+      "to": "stage.initial_exploration",
+      "relationship": "requires_sensory_playful_entry",
+      "evidence": "一年级学生观察力和注意力弱，初探阶段使用学习单、盲盒触摸和代言表达打开观察。",
+      "source_status": "reconstructed_from_R221A_R221C"
+    },
+    {
+      "edge_id": "p2_edge_005",
+      "from": "stage.initial_exploration",
+      "to": "activity.material_mystery_box",
+      "relationship": "launches_activity",
+      "evidence": "盲盒猜猜猜让学生从名称识别走向外形、触感、用途描述。",
+      "source_status": "confirmed_from_dictionary"
+    },
+    {
+      "edge_id": "p2_edge_006",
+      "from": "stage.second_exploration",
+      "to": "activity.story_video_prompt",
+      "relationship": "deepens_value",
+      "evidence": "圆珠笔、太空笔、毛笔工艺和造笔厂故事让文具从用品上升为技术、工艺和文化。",
+      "source_status": "reconstructed_from_user_gold_sample_review"
+    },
+    {
+      "edge_id": "p2_edge_007",
+      "from": "stage.making_new_friend",
+      "to": "activity.one_plus_one_design",
+      "relationship": "scaffolds_design",
+      "evidence": "一年级设计能力弱，先用铅笔加粘土模拟改进，降低实现难度。",
+      "source_status": "reconstructed_from_user_gold_sample_review"
+    },
+    {
+      "edge_id": "p2_edge_008",
+      "from": "activity.one_plus_one_design",
+      "to": "activity.one_plus_n_transformation",
+      "relationship": "expands_material_technique",
+      "evidence": "学生从单一粘土模拟过渡到线形材料、纸材、形状材料和技法菜单。",
+      "source_status": "reconstructed_from_user_gold_sample_review"
+    },
+    {
+      "edge_id": "p2_edge_009",
+      "from": "activity.one_plus_n_transformation",
+      "to": "component.technique_menu",
+      "relationship": "selects_component",
+      "evidence": "学生需要从想法转到做法，技法菜单提供低门槛技法选择。",
+      "source_status": "system_reasoning_product"
+    },
+    {
+      "edge_id": "p2_edge_010",
+      "from": "activity.one_plus_n_transformation",
+      "to": "assessment.evidence_chain",
+      "relationship": "produces_evidence",
+      "evidence": "材料选择理由、技法使用痕迹、新朋友作品和展示表达共同证明设计改进能力。",
+      "source_status": "system_reasoning_product"
+    },
+    {
+      "edge_id": "p2_edge_011",
+      "from": "stage.public_friendship",
+      "to": "unit.performance_task",
+      "relationship": "converges_to_output",
+      "evidence": "结交阶段通过展示、辩论、建议书和使用指南把作品经验迁移到学习生活建议。",
+      "source_status": "reconstructed_from_R221A_and_user_review"
+    },
+    {
+      "edge_id": "p2_edge_012",
+      "from": "component.keyword_feedback",
+      "to": "assessment.peer_evaluation",
+      "relationship": "improves_evaluation_language",
+      "evidence": "关键词评价解决一年级学生只说好看的问题。",
+      "source_status": "system_reasoning_product"
+    }
+  ]
+}
