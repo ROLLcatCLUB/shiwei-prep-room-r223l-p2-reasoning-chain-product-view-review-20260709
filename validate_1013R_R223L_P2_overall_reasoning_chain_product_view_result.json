@@ -1,0 +1,723 @@
+{
+  "passed": true,
+  "check_count": 143,
+  "failed": 0,
+  "failures": [],
+  "checks": [
+    {
+      "name": "required_file:R223L_P2_overall_reasoning_chain_product.md",
+      "passed": true,
+      "detail": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW\\R223L_P2_overall_reasoning_chain_product.md"
+    },
+    {
+      "name": "non_empty:R223L_P2_overall_reasoning_chain_product.md",
+      "passed": true,
+      "detail": "10868"
+    },
+    {
+      "name": "required_file:R223L_P2_reasoning_chain_edges.json",
+      "passed": true,
+      "detail": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW\\R223L_P2_reasoning_chain_edges.json"
+    },
+    {
+      "name": "non_empty:R223L_P2_reasoning_chain_edges.json",
+      "passed": true,
+      "detail": "4460"
+    },
+    {
+      "name": "required_file:R223L_P2_gold_sample_traceability.md",
+      "passed": true,
+      "detail": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW\\R223L_P2_gold_sample_traceability.md"
+    },
+    {
+      "name": "non_empty:R223L_P2_gold_sample_traceability.md",
+      "passed": true,
+      "detail": "6985"
+    },
+    {
+      "name": "required_file:R223L_P2_deep_canvas_mock.html",
+      "passed": true,
+      "detail": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW\\R223L_P2_deep_canvas_mock.html"
+    },
+    {
+      "name": "non_empty:R223L_P2_deep_canvas_mock.html",
+      "passed": true,
+      "detail": "18435"
+    },
+    {
+      "name": "required_file:R223L_P2_report.md",
+      "passed": true,
+      "detail": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW\\R223L_P2_report.md"
+    },
+    {
+      "name": "non_empty:R223L_P2_report.md",
+      "passed": true,
+      "detail": "2382"
+    },
+    {
+      "name": "required_file:README_FOR_GPT_REVIEW.md",
+      "passed": true,
+      "detail": "D:\\Documents\\SmartEdu\\xiaobei-core\\outputs\\PREP_ROOM_RENDER_CANVAS_DEEPEN_V1\\1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW\\README_FOR_GPT_REVIEW.md"
+    },
+    {
+      "name": "non_empty:README_FOR_GPT_REVIEW.md",
+      "passed": true,
+      "detail": "1513"
+    },
+    {
+      "name": "doc_contains:Source Evidence Layer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:Unit DNA Judgment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:Student Problem Reasoning",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:Unit Total Reasoning Chain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:Four-stage Reasoning Chain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:Current Stage Deep Chain Example",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:Component Invocation Logic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:R223M = BLOCKED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc_contains:FORMAL_UI = BLOCKED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:资料证据层",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:大观念",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:基本问题",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:表现性任务",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:单元 DNA 判断",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:学生问题推理",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:四阶段推理链",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:智造·新朋友",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:1+1 合作设计",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:1+n 大变身",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:组件调用逻辑",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:评价证据",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "html_contains:data-formal-ui=\"false\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "trace_contains:raw_original_docx_or_pptx_in_repo = false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "trace_contains:design_application_and_life_problem_solving",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "trace_contains:Contamination Control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "trace_contains:Do not generalize stationery-specific stories",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:doc:正式 UI 已放行",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:doc:formal UI approved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:doc:R97B route implemented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:doc:provider call enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:doc:database write enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:doc:R223M = PASS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:html:正式 UI 已放行",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:html:formal UI approved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:html:R97B route implemented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:html:provider call enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:html:database write enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:html:R223M = PASS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:trace:正式 UI 已放行",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:trace:formal UI approved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:trace:R97B route implemented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:trace:provider call enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:trace:database write enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:trace:R223M = PASS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:report:正式 UI 已放行",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:report:formal UI approved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:report:R97B route implemented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:report:provider call enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:report:database write enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:report:R223M = PASS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:readme:正式 UI 已放行",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:readme:formal UI approved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:readme:R97B route implemented",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:readme:provider call enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:readme:database write enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "forbidden_absent:readme:R223M = PASS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edges_json_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edges_count_at_least_12",
+      "passed": true,
+      "detail": "12"
+    },
+    {
+      "name": "formal_ui_false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stage_id_matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "required_edge:unit.big_idea->unit.essential_question",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "required_edge:unit.essential_question->unit.performance_task",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "required_edge:stage.making_new_friend->activity.one_plus_one_design",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "required_edge:activity.one_plus_one_design->activity.one_plus_n_transformation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "required_edge:activity.one_plus_n_transformation->assessment.evidence_chain",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_1:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_1:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_1:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_1:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_1:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_2:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_2:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_2:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_2:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_2:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_3:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_3:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_3:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_3:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_3:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_4:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_4:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_4:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_4:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_4:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_5:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_5:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_5:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_5:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_5:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_6:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_6:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_6:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_6:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_6:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_7:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_7:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_7:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_7:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_7:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_8:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_8:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_8:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_8:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_8:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_9:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_9:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_9:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_9:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_9:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_10:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_10:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_10:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_10:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_10:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_11:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_11:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_11:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_11:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_11:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_12:has_from",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_12:has_to",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_12:has_relationship",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_12:has_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "edge_12:has_source_status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screenshot_exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screenshot_non_empty",
+      "passed": true,
+      "detail": "320288"
+    },
+    {
+      "name": "screenshot_smoke_json_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screenshot_no_horizontal_overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "screenshot_key_sections_present",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}
