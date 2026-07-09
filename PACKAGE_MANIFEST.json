@@ -1,0 +1,83 @@
+{
+  "stage_id": "1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW",
+  "status": "READY_FOR_REASONING_CHAIN_PRODUCT_REVIEW",
+  "created_at_utc": "2026-07-09T06:41:52.130702+00:00",
+  "formal_ui": false,
+  "r223m": "BLOCKED",
+  "boundaries": {
+    "r97b_modified": false,
+    "frontend_backend_modified": false,
+    "runtime_provider_model_prompt_db": false,
+    "formal_apply": false
+  },
+  "review_order": [
+    "R223L_P2_overall_reasoning_chain_product.md",
+    "R223L_P2_deep_canvas_mock.html",
+    "R223L_P2_screenshot.png",
+    "R223L_P2_gold_sample_traceability.md",
+    "R223L_P2_reasoning_chain_edges.json",
+    "R223L_P2_report.md"
+  ],
+  "files": [
+    {
+      "path": "PACKAGE_MANIFEST.json",
+      "size": 2462,
+      "sha256": "1BE4828AD2A3A05AF5480E886050461395062AD160C5BF39FC5324CD2C8F1C20"
+    },
+    {
+      "path": "R223L_P2_deep_canvas_mock.html",
+      "size": 18435,
+      "sha256": "1AFB2C0EF9371760CDB64797F0A8695ECCFE69275B9423F080A3CE9E90AC5550"
+    },
+    {
+      "path": "R223L_P2_gold_sample_traceability.md",
+      "size": 6985,
+      "sha256": "8ACE963A0C6DE88F4481059F2D017A764DF0A32BE0142690B961936E81154CF8"
+    },
+    {
+      "path": "R223L_P2_overall_reasoning_chain_product.md",
+      "size": 10868,
+      "sha256": "0E954EB09DD8C62361EC2FE270B63CF9721B0C65D34797755CCDADBD035F68E3"
+    },
+    {
+      "path": "R223L_P2_reasoning_chain_edges.json",
+      "size": 4460,
+      "sha256": "B7F97CD7A3AB21049CBCE1D70C0A08815CC46C36F83651381F24C1E0DC907C14"
+    },
+    {
+      "path": "R223L_P2_report.md",
+      "size": 2382,
+      "sha256": "AB6B2B63C63AA7BE288C8A869282CF957062F148FBE2F2DA08C2F2013C55879D"
+    },
+    {
+      "path": "R223L_P2_screenshot.png",
+      "size": 320288,
+      "sha256": "5A3E33750918BE9830743B094857BB1E48D820A18DC0E75299CC635E4A5A8A1A"
+    },
+    {
+      "path": "R223L_P2_screenshot_smoke_result.json",
+      "size": 521,
+      "sha256": "3174D5C5E31832A48F4C49D724BECDAC479B0E8080191F3783CDCE79EAF0A91A"
+    },
+    {
+      "path": "README.md",
+      "size": 677,
+      "sha256": "AAC70E304160B7EFBA63842F392E58639206ACE58F38A0249F3547DE3A26A9C8"
+    },
+    {
+      "path": "README_FOR_GPT_REVIEW.md",
+      "size": 1513,
+      "sha256": "D85D8743771066391D5C13356A83B3318D17973BEF37844484F858123EB7E04B"
+    },
+    {
+      "path": "validate_1013R_R223L_P2_overall_reasoning_chain_product_view.py",
+      "size": 5830,
+      "sha256": "BBC6EBF6A914B321C854D9ABE42D41E31EB811B80CB8939010119673FCCA5A20"
+    },
+    {
+      "path": "validate_1013R_R223L_P2_overall_reasoning_chain_product_view_result.json",
+      "size": 16575,
+      "sha256": "531AE0806FA2523FF1EC7B3B2D02B7C7358F65CF42B87EE3F932A0C0046786CB"
+    }
+  ]
+}
