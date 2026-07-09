@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>R223L-P2 教学推理链生产物</title>
+  <style>
+    :root {
+      --ink: #24342f;
+      --muted: #6d7b75;
+      --line: #d9e6df;
+      --soft: #f3f8f5;
+      --panel: #ffffff;
+      --accent: #277d6b;
+      --accent-2: #9a6a13;
+      --warn: #fff7e6;
+      --warn-line: #e8c87a;
+      --blue: #2f6188;
+      --blue-soft: #edf5fb;
+      --shadow: 0 18px 46px rgba(24, 54, 46, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 1180px;
+      background:
+        linear-gradient(90deg, rgba(39,125,107,0.06) 1px, transparent 1px),
+        linear-gradient(rgba(39,125,107,0.06) 1px, transparent 1px),
+        #f8fbf7;
+      background-size: 24px 24px;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    .stage-shell {
+      width: 1360px;
+      margin: 0 auto;
+      padding: 28px 28px 44px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+
+    .title-kicker {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 820px;
+    }
+
+    .status-card {
+      width: 330px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .status-card strong { color: var(--accent); }
+
+    .hero-chain {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid #b9d8ce;
+      background: #e9f5f1;
+      color: #216e5d;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .evidence-card, .mini-card {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .value {
+      font-size: 15px;
+      line-height: 1.75;
+      font-weight: 700;
+    }
+
+    .chain-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 14px;
+    }
+
+    .chain-node {
+      position: relative;
+      min-height: 118px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .chain-node:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      top: 42px;
+      right: -9px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .chain-node h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--accent);
+    }
+
+    .chain-node p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.65;
+      color: #40514b;
+    }
+
+    .main-layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .side-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .panel h2, .panel h3 {
+      margin: 0 0 12px;
+      line-height: 1.35;
+    }
+
+    .panel h2 { font-size: 19px; }
+    .panel h3 { font-size: 16px; }
+
+    .plain-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #40514b;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .dna-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .dna-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: #fbfdfb;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .canvas {
+      background: #ffffff;
+      border: 2px solid #b9d8ce;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .canvas-head {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+
+    .canvas-head h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    .canvas-head p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .focus-stage {
+      border: 2px solid #2a806d;
+      background: linear-gradient(180deg, #f7fffb, #ffffff);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .focus-stage h3 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      color: var(--accent);
+    }
+
+    .focus-stage .lead {
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0;
+      color: #334740;
+    }
+
+    .deep-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .deep-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 138px;
+    }
+
+    .deep-card h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      color: var(--blue);
+    }
+
+    .deep-card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.75;
+      color: #3e4f49;
+    }
+
+    .lesson-flow {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 120px 1fr 1fr 1fr;
+      gap: 10px;
+      align-items: stretch;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdfb;
+      padding: 12px;
+    }
+
+    .step-name {
+      font-weight: 800;
+      color: var(--accent);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .step-cell {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #40514b;
+    }
+
+    .step-cell strong {
+      display: block;
+      color: var(--ink);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .component-band {
+      border: 1px dashed #9fc9bd;
+      border-radius: 8px;
+      padding: 14px;
+      background: #f8fcfa;
+    }
+
+    .component-band h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .component-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 126px;
+    }
+
+    .component-card h4 {
+      margin: 0 0 7px;
+      font-size: 14px;
+      color: var(--accent-2);
+    }
+
+    .component-card p {
+      margin: 0 0 7px;
+      font-size: 12px;
+      line-height: 1.55;
+      color: #4b5b55;
+    }
+
+    .warning {
+      border: 1px solid var(--warn-line);
+      background: var(--warn);
+      border-radius: 8px;
+      padding: 12px;
+      color: #6f520e;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: center;
+    }
+  </style>
+</head>
+<body data-stage-id="1013R_R223L_P2_OVERALL_REASONING_CHAIN_PRODUCT_VIEW" data-formal-ui="false">
+  <main class="stage-shell">
+    <header class="topbar">
+      <div>
+        <div class="title-kicker">师维智教 · 教学推理链生产物 · static mock</div>
+        <h1>《我为文具代言》为什么这样生成</h1>
+        <div class="subtitle">
+          这不是正式 UI，也不是 R97B 页面。它只把“大观念 → 基本问题 → 表现性任务 → 四阶段责任 → 当前课时活动 → 组件与证据”的生产链摊开给老师审核。
+        </div>
+      </div>
+      <aside class="status-card">
+        <div><strong>R223L-P1</strong>：视觉密度改善，但推理链不可见</div>
+        <div><strong>R223L-P2</strong>：整体教学推理链生产物</div>
+        <div><strong>R223M</strong>：BLOCKED</div>
+        <div><strong>正式 UI / R97B / runtime</strong>：BLOCKED</div>
+      </aside>
+    </header>
+
+    <section class="hero-chain" data-section="source-evidence-layer">
+      <div class="section-title">
+        <h2>1. 资料证据层：先看系统依据什么推</h2>
+        <span class="badge">证据先于页面</span>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <div class="label">大观念</div>
+          <div class="value">体验传统工艺，带着好奇心和想象力设计改进文具，从而改善学习生活。</div>
+        </article>
+        <article class="evidence-card">
+          <div class="label">基本问题</div>
+          <div class="value">怎样全方面了解文具，并感受它的重要性？</div>
+        </article>
+        <article class="evidence-card">
+          <div class="label">表现性任务</div>
+          <div class="value">形成《一年级购买文具建议书》和《文具课堂使用指南》。</div>
+        </article>
+      </div>
+      <div class="chain-row" data-section="unit-total-reasoning-chain">
+        <div class="chain-node">
+          <h3>大观念</h3>
+          <p>文具不是静物对象，而是学习生活里的工具、设计和文化载体。</p>
+        </div>
+        <div class="chain-node">
+          <h3>基本问题</h3>
+          <p>学生要从观察、使用、故事和改造中理解文具为什么重要。</p>
+        </div>
+        <div class="chain-node">
+          <h3>表现性任务</h3>
+          <p>用建议书、指南、代言展示证明理解，而不只交一件作品。</p>
+        </div>
+        <div class="chain-node">
+          <h3>四阶段学习责任</h3>
+          <p>初探、再探、智造、结交分别承担发现、理解、改造、迁移。</p>
+        </div>
+        <div class="chain-node">
+          <h3>评价证据链</h3>
+          <p>观察记录、设计理由、作品说明、辩论表达和指南质量共同成证据。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-layout">
+      <aside class="side-stack">
+        <div class="panel" data-section="unit-dna-judgment">
+          <h2>2. 单元 DNA 判断</h2>
+          <div class="dna-list">
+            <div class="dna-item"><strong>主类型：</strong>设计应用 + 生活问题解决</div>
+            <div class="dna-item"><strong>辅助类型：</strong>观察表达、工艺技术文化理解、公开表达任务</div>
+            <div class="dna-item"><strong>不是：</strong>单纯画文具、普通手工、泛泛介绍物品</div>
+          </div>
+        </div>
+
+        <div class="panel" data-section="student-problem-reasoning">
+          <h2>3. 学生问题推理</h2>
+          <ul class="plain-list">
+            <li>一年级观察容易散，所以需要摸、看、圈、说。</li>
+            <li>注意力短，所以活动要短回合、游戏化、可操作。</li>
+            <li>手工能力弱，所以先 1+1 支架，再 1+n 变化。</li>
+            <li>表达需要句式支架，所以要学习单、词库和代言话术。</li>
+            <li>好奇心强，所以可以用圆珠笔、太空笔、毛笔工艺打开价值线。</li>
+          </ul>
+        </div>
+
+        <div class="panel" data-section="four-stage-chain">
+          <h2>4. 四阶段推理链</h2>
+          <ul class="plain-list">
+            <li><strong>初探：</strong>认识、触摸、描述、代言、拼搭。</li>
+            <li><strong>再探：</strong>剪影、圆珠笔、太空笔、毛笔工艺、智造交流。</li>
+            <li><strong>智造：</strong>结构观察、1+1 合作设计、1+n 文具大变身、笔友汇。</li>
+            <li><strong>结交：</strong>线上交流、小型辩论、建议书、使用指南。</li>
+          </ul>
+        </div>
+
+        <div class="warning">
+          高风险提醒：本页是推理链产品视图，不授权正式 UI、R97B 路由、模型生成、数据库写入或正式应用。
+        </div>
+      </aside>
+
+      <section class="canvas" data-section="current-stage-deep-chain">
+        <div class="canvas-head">
+          <h2>5. 当前课时深链：第三阶段「智造·新朋友」</h2>
+          <p>这一阶段不是“让学生随便改造文具”，而是把前两阶段的观察、故事和价值理解，转化为低门槛的设计改进、创作表达和可评价证据。</p>
+        </div>
+
+        <article class="focus-stage">
+          <h3>当前唯一展开主区：从理解文具到改进文具</h3>
+          <p class="lead">
+            前置证据来自初探的观察描述、再探的工艺和智造故事。本课责任是让学生说出一个使用问题，选择材料或技法完成一次文具改造，并能解释改造理由。
+          </p>
+          <div class="deep-grid">
+            <div class="deep-card">
+              <h4>教师怎么说</h4>
+              <p>“刚才我们认识了文具的结构和故事。现在请你想一想：这个文具在使用时有没有一个小麻烦？你能不能给它交一个新朋友，让它更好用？”</p>
+            </div>
+            <div class="deep-card">
+              <h4>学生怎么做</h4>
+              <p>观察结构，提出问题，先用 1+1 组合试一试，再从 1+n 的材料和技法中选择一种完成改造。</p>
+            </div>
+            <div class="deep-card">
+              <h4>素材 / 大屏 / 学习单</h4>
+              <p>大屏显示结构图、问题例子、材料菜单和技法菜单；学习单记录“原文具、问题、新朋友、改造理由”。</p>
+            </div>
+            <div class="deep-card">
+              <h4>评价证据</h4>
+              <p>保留改造草图或作品照片，能说出使用问题、材料选择、改造理由和同伴建议。</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="lesson-flow" data-section="activity-reasoning-chain">
+          <div class="flow-step">
+            <div class="step-name">1. 结构观察</div>
+            <div class="step-cell"><strong>为什么存在</strong>学生容易直接装饰，先看功能结构。</div>
+            <div class="step-cell"><strong>课堂动作</strong>圈出握、写、收纳、保护等关键位置。</div>
+            <div class="step-cell"><strong>证据</strong>结构标注或口头说明。</div>
+          </div>
+          <div class="flow-step">
+            <div class="step-name">2. 1+1 合作设计</div>
+            <div class="step-cell"><strong>为什么存在</strong>降低设计难度，用一个材料朋友解决一个小问题。</div>
+            <div class="step-cell"><strong>课堂动作</strong>铅笔 + 粘土、橡皮 + 纸套等低门槛组合。</div>
+            <div class="step-cell"><strong>证据</strong>能说明“我解决了什么问题”。</div>
+          </div>
+          <div class="flow-step">
+            <div class="step-name">3. 1+n 大变身</div>
+            <div class="step-cell"><strong>为什么存在</strong>把单一试想到多材料、多技法选择。</div>
+            <div class="step-cell"><strong>课堂动作</strong>从纸材、线材、形状材料和技法菜单中选择。</div>
+            <div class="step-cell"><strong>证据</strong>作品 + 材料选择理由。</div>
+          </div>
+          <div class="flow-step">
+            <div class="step-name">4. 笔友汇</div>
+            <div class="step-cell"><strong>为什么存在</strong>把个人作品变成公共表达和建议。</div>
+            <div class="step-cell"><strong>课堂动作</strong>同伴看一看，说一个优点和一个使用建议。</div>
+            <div class="step-cell"><strong>证据</strong>同伴评价、推荐语、使用提醒。</div>
+          </div>
+        </div>
+
+        <div class="component-band" data-section="component-invocation-logic">
+          <h3>6. 组件调用逻辑：组件不是工具按钮，是解决学生问题的教学动作</h3>
+          <div class="component-grid">
+            <div class="component-card">
+              <h4>圈一圈</h4>
+              <p><strong>解决：</strong>学生说不清依据。</p>
+              <p><strong>这里用：</strong>结构观察时标出关键位置。</p>
+              <p><strong>证据：</strong>标注图或关键词。</p>
+            </div>
+            <div class="component-card">
+              <h4>技法菜单</h4>
+              <p><strong>解决：</strong>学生有想法但不会做。</p>
+              <p><strong>这里用：</strong>1+n 文具大变身选择路径。</p>
+              <p><strong>证据：</strong>技法选择和理由。</p>
+            </div>
+            <div class="component-card">
+              <h4>学习单记录</h4>
+              <p><strong>解决：</strong>过程证据容易丢。</p>
+              <p><strong>这里用：</strong>记录原问题、新朋友和改造理由。</p>
+              <p><strong>证据：</strong>学习单行或作品说明。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="footer-note">
+      R223L-P2 static reasoning product view. Fixture-only. No R97B change. No runtime. No model call. No database. No formal apply.
+    </div>
+  </main>
+</body>
+</html>
+
